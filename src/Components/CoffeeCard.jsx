@@ -5,7 +5,7 @@ const CoffeeCard = ({coffee, setCoffees, coffees}) => {
   const {_id, name, chef, supplier, taste, photo} = coffee
    const handleDelete = _id => {
     console.log('delete', _id);
-    fetch(`http://localhost:3000/coffees/${_id}`, {
+    fetch(`https://practice-coffee-server-beta.vercel.app/coffees/${_id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'

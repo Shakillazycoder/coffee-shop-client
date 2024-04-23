@@ -17,7 +17,7 @@ const UpdateCoffee = () => {
             photo: form.photo.value,
         }
         console.log(coffee);
-        fetch(`http://localhost:3000/coffees/${_id}`, {
+        fetch(`https://practice-coffee-server-beta.vercel.app/coffees/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

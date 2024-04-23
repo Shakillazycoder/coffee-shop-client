@@ -8,9 +8,11 @@ const Home = () => {
     return (
         <div>
             <h1>Coffee: {coffees.length}</h1>
+            <div className="space-y-5">
             {
              coffees.map((coffee, index) => <CoffeeCard key={index} coffees={coffees} setCoffees={setCoffees} coffee={coffee}></CoffeeCard>)
             }
+            </div>
         </div>
     );
 };
