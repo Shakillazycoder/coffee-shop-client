@@ -18,42 +18,36 @@ import UpdateUser from './Components/UpdateUser.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>,
-    children: [
-      {
-       path: "/",
-       element: <Home></Home>,
-       loader: () => fetch('https://practice-coffee-server-beta.vercel.app/coffees')
-      },
-      {
-        path: "/addCoffee",
-        element: <AddCoffee></AddCoffee>,
-      },
-      {
-        path: "/updateCoffee/:id",
-        element: <UpdateCoffee></UpdateCoffee>,
-        loader: ({params}) => fetch(`https://practice-coffee-server-beta.vercel.app/coffees/${params.id}`)
-      },
-      {
-        path: "/login",
-        element: <Login></Login>,
-      },
-      {
-        path: "/register",
-        element: <Register></Register>,
-      },
-      {
-        path: "/users",
-        element: <Users></Users>,
-        loader: () => fetch('https://practice-coffee-server-beta.vercel.app/users')
-      },
-      {
-        path: "/updateUser/:id",
-        element: <UpdateUser></UpdateUser>,
-        loader: ({params}) => fetch(`https://practice-coffee-server-beta.vercel.app/users/${params.id}`)
-      }
-    ]
+    element: <Home></Home>,
+    loader: () => fetch('https://practice-coffee-server-beta.vercel.app/coffees')
+   },
+   {
+    path: "/addCoffee",
+    element: <AddCoffee></AddCoffee>,
   },
+  {
+    path: "/updateCoffee/:id",
+    element: <UpdateCoffee></UpdateCoffee>,
+    loader: ({params}) => fetch(`https://practice-coffee-server-beta.vercel.app/coffees/${params.id}`)
+  },
+  {
+    path: "/login",
+    element: <Login></Login>,
+  },
+  {
+    path: "/register",
+    element: <Register></Register>,
+  },
+  {
+    path: "/users",
+    element: <Users></Users>,
+    loader: () => fetch('https://practice-coffee-server-beta.vercel.app/users')
+  },
+  {
+    path: "/updateUser/:id",
+    element: <UpdateUser></UpdateUser>,
+    loader: ({params}) => fetch(`https://practice-coffee-server-beta.vercel.app/users/${params.id}`)
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

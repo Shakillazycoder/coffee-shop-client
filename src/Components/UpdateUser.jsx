@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import Header from "./Header";
 
 const UpdateUser = () => {
     const updateUser = useLoaderData();
@@ -31,6 +32,7 @@ const UpdateUser = () => {
     }
     return (
         <div>
+          <Header></Header>
             <div>
       <div>
         <div className="hero min-h-screen bg-base-200">

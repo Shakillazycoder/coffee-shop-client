@@ -1,4 +1,5 @@
 import Swal from "sweetalert2";
+import Header from "./Header";
 
 const AddCoffee = () => {
   const handleAddCoffee = e => {
@@ -45,6 +46,7 @@ const AddCoffee = () => {
   }
     return (
         <div>
+          <Header></Header>
             <div>
       <h1 className="flex justify-center items-center mb-5">Add Coffee</h1>
       <div className="flex justify-center items-center mx-auto">

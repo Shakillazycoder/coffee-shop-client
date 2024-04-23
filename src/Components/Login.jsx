@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import Header from "./Header";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -53,6 +54,7 @@ const Login = () => {
   };
   return (
     <div>
+      <Header></Header>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">

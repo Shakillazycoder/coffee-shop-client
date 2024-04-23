@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import Header from "./Header";
 
 const Users = () => {
   const LoadedUsers = useLoaderData();
@@ -29,6 +30,7 @@ const Users = () => {
 
   return (
     <div>
+      <Header></Header>
       <h1>users: {users.length}</h1>
       <div className="overflow-x-auto">
         <table className="table">

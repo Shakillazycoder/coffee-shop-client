@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import Header from "./Header";
 
 const UpdateCoffee = () => {
     const updateCoffee = useLoaderData()
@@ -40,6 +41,7 @@ const UpdateCoffee = () => {
     }
     return (
         <div>
+          <Header></Header>
             <h1 className="font-bold text-3xl mb-5">Update Coffee: {updateCoffee.name}</h1>
             <div>
             <div>
